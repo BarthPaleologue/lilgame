@@ -2,11 +2,11 @@ import { Player } from "./player";
 import { Blob } from "./blob";
 
 export class Canvas {
-    elm: HTMLElement
+    elm: HTMLCanvasElement
     ctx: CanvasRenderingContext2D
-    constructor(canvas: HTMLElement) {
+    constructor(canvas: HTMLCanvasElement) {
         this.elm = canvas;
-        this.ctx = (<HTMLCanvasElement>this.elm).getContext("2d")!;
+        this.ctx = this.elm.getContext("2d")!;
     }
     clear() {
         this.ctx.fillStyle = "black";

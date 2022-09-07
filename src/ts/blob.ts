@@ -1,4 +1,5 @@
 import { Vector2D } from "./vector";
+import {Settings} from "./settings";
 
 export class Blob {
     x: number;
@@ -32,10 +33,10 @@ export class Blob {
         if (this.y <= this.width / 2) {
             this.speed.y = -1 * this.speed.y;
         }
-        if (this.x >= 600 - this.width / 2) {
+        if (this.x >= Settings.CANVAS_WIDTH - this.width / 2) {
             this.speed.x = -1 * this.speed.x;
         }
-        if (this.y >= 600 - this.width / 2) {
+        if (this.y >= Settings.CANVAS_HEIGHT - this.width / 2) {
             this.speed.y = -1 * this.speed.y;
         }
     }
